@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ольга Аносова](https://up.htmlacademy.ru/htmlcss/32/user/400343).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Петрищак](https://htmlacademy.ru/profile/maksim_petrishchak).
 
 ---
 
