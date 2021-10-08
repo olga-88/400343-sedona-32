@@ -53,8 +53,8 @@
           <!-- Заголовок и хлебные крошки -->
           <main class="main-inner">
               <header class="inner-header">
-              <h1 class="inner-header-title">Гостиницы Седоны</h1>
-              <ul class="breadcrumbs">
+              <h1 class="main-title">Гостиницы Седоны</h1>
+              <ol class="breadcrumbs">
                   <li class="breadcrumbs-item">
                       <a class="breadcrumbs-link" href="index.html">
                         <span class="visually-hidden">
@@ -67,37 +67,37 @@
                   </li>
 
 
-              </ul>
+              </ol>
               </header>
 
         <!-- Фильтры для поиска -->
         <section class="catalog-filter-hotels">
-          <h2 class="visually-hidden">Каталог отелей с фильтрами</h2>
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+        <h2 class="visually-hidden">Каталог отелей с фильтрами</h2>
+        <form class="form filter-form" action="https://echo.htmlacademy.ru/" method="get">
 
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Инфраструктура:</legend>
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Инфраструктура:</legend>
 
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
-                <label class="catalog-filter-control">
-                  <input class="visually-hidden control-input" type="checkbox" name="infrastructure" checked>
+            <ul class="form-field-list">
+              <li class="form-field-item">
+                <label class="form-label">
+                  <input class="visually-hidden form-checkbox" type="checkbox" name="infrastructure" checked>
                   <span class="control-mark"></span>
               <span class="control-label">Бассейн</span>
                 </label>
               </li>
 
-              <li class="catalog-filter-item">
-                <label class="catalog-filter-control">
-                  <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+              <li class="form-field-item">
+                <label class="form-label">
+                  <input class="visually-hidden form-checkbox" type="checkbox" name="parking" checked>
                   <span class="control-mark"></span>
               <span class="control-label">Парковка</span>
                 </label>
               </li>
 
-              <li class="catalog-filter-item">
-                <label class="catalog-filter-control">
-                  <input class="visually-hidden control-input" type="checkbox" name="wifi">
+              <li class="form-field-item">
+                <label class="form-label">
+                  <input class="visually-hidden form-checkbox" type="checkbox" name="wifi">
                   <span class="control-mark"></span>
               <span class="control-label">Wi-Fi</span>
                 </label>
@@ -105,29 +105,29 @@
             </ul>
             </fieldset>
 
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Тип жилья:</legend>
+            <fieldset class="form-fieldset">
+              <legend class="form-legend">Тип жилья:</legend>
 
-              <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                  <label class="catalog-filter-control">
-                    <input class="visually-hidden control-input" type="radio" name="type-of-hotel" value="hotel" checked>
+              <ul class="form-field-list">
+                  <li class="form-field-item">
+                  <label class="form-label">
+                    <input class="visually-hidden form-radio" type="radio" name="type-of-hotel" value="hotel" checked>
                     <span class="control-mark"></span>
                 <span class="control-label">Гостиница</span>
                   </label>
                 </li>
   
-                <li class="catalog-filter-item">
-                  <label class="catalog-filter-control">
-                    <input class="visually-hidden control-input" type="radio" name="type-of-hotel" value="motel">
+                <li class="form-field-item">
+                  <label class="form-label">
+                    <input class="visually-hidden form-radio" type="radio" name="type-of-hotel" value="motel">
                     <span class="control-mark"></span>
                 <span class="control-label">Мотель</span>
                   </label>
                 </li>
   
-                <li class="catalog-filter-item">
-                  <label class="catalog-filter-control">
-                    <input class="visually-hidden control-input" type="radio" name="type-of-hotel" value="apartments">
+                <li class="form-field-item">
+                  <label class="form-label">
+                    <input class="visually-hidden form-radio" type="radio" name="type-of-hotel" value="apartments">
                     <span class="control-mark"></span>
                 <span class="control-label">Апартаменты</span>
                   </label>
@@ -135,9 +135,9 @@
               </ul>
               </fieldset>
 
-              <!--Здесь возникли сложности. Можно ли так обернуть или нужно было по-другому сделать?-->
-              <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title"> Стоимость, ₽:</legend>
+              <!--Правильно ли теперь здесь обернуто?-->
+              <fieldset class="form-fieldset">
+              <legend class="form-legend"> Стоимость, ₽:</legend>
               <button class="range-toggle toggle-min" type="button">
                 <span class="visually-hidden">Изменить минимальную цену</span>
               </button>
@@ -146,51 +146,56 @@
               </button>
   
               <label class="catalog-filter-label">
-              <input class="catalog-filter-input" type="number" name="min-price"> 
+              <input class="catalog-filter-input" type="number" name="min-price" placeholder="от">
+              <span class="filter-input">от</span> 
               </label>
   
               <label class="catalog-filter-label">
-              <input class="catalog-filter-input" type="number" name="max-price"> 
-              </label>
+              <input class="catalog-filter-input" type="number" name="max-price" placeholder="до"> 
+              <span class="filter-input">до</span>
+            </label>
             </fieldset>
 
-            <button class="button" type="submit">Применить</button>
-            <button class="button" type="reset">Сбросить</button>
+            <!--Кнопка-->
+            <button class="button form-submit form-reset" type="submit">Применить</button>
+            <!--Здесь исправила с кнопки на ссылку.-->
+            <a class="button-reset" href="#">Сбросить</a>
             </form>
           </section>
 
             <!--Сортировка гостиниц-->
             <section class="sorting-hotels">
-              <h2 class="find-hotels">Найдено гостиниц: 38</h2> 
-              <form class="sorting-type">
-                <label class="visually-hidden" for="sorting">Сортировка</label>
+              <h2 class="find-hotels">Найдено гостиниц: <span class="result-sorting">38</span></h2> 
+              
                 <select class="select-control" id="sorting" name="sorting">
                   <option value="cheap">Сначала дешевые</option>
+                  <option value="expensive">Сначала дорогие</option>
+                  <option value="popular">Сначала популярные</option>
                 </select>
                 <button class="visually-hidden" type="submit">Отсортировать гостиницы</button>
-              </form>
               
-              <a class="button" href="#">
+              
+              <a class="sort-button" href="#">
                 <span class="visually-hidden">Иконка карточек</span>
               </a>
 
-              <a class="button" href="#">
+              <a class="sort-button" href="#">
                 <span class="visually-hidden">Иконка карточек с описанием</span>
               </a>
 
-              <a class="button button-light" href="#">
+              <a class="sort-button button-light" href="#">
                 <span class="visually-hidden">Иконка списка</span>
               </a>
             </section>
 
             <!--Блок с карточками гостиниц-->
-            <section class="sorting-houses">
+            <section class="hotels-section">
               <h2 class="visually hidden">Список гостиниц</h2>
               <ul class="hotels-list">
 
-                <li class="hotels-list-item">
-                  <img class="hotels-card-image" src="" alt="Пейзаж с видом на красные горы">
-                  <a class="hotels-list-item-link" href="#">
+                <li class="hotels-card card">
+                  <img class="card-image" src="" alt="Пейзаж с видом на красные горы">
+                  <a class="card-link" href="#">
                     <h3 class="hotels-card-title">Amara Resort & Spa</h3>
                     </a>
                     <span class="hotels-list-details">Гостиница</span>
@@ -203,9 +208,9 @@
                       </div>
                 </li>
 
-                <li class="hotels-list-item">
-                  <img class="hotels-card-image" src="" alt="Пейзаж с видом на красные горы">
-                  <a class="hotels-list-item-link" href="#">
+                <li class="hotels-card card">
+                  <img class="card-image" src="" alt="Пейзаж с видом на красные горы">
+                  <a class="card-link" href="#">
                     <h3 class="hotels-card-title">Desert Quail Inn</h3>
                     </a>
                     <span class="hotels-list-details">Мотель</span>
@@ -218,9 +223,9 @@
                       </div>
                 </li>
 
-                <li class="hotels-list-item">
-                  <img class="hotels-card-image" src="" alt="Пейзаж с видом на красные горы">
-                  <a class="hotels-list-item-link" href="#">
+                <li class="hotels-card card">
+                  <img class="card-image" src="" alt="Пейзаж с видом на красные горы">
+                  <a class="card-link" href="#">
                     <h3 class="hotels-card-title">Villas at Poco Diablo</h3>
                     </a>
                     <span class="hotels-list-details">Апартаменты</span>
@@ -233,9 +238,9 @@
                       </div>
                 </li>
 
-                <li class="hotels-list-item">
-                  <img class="hotels-card-image" src="" alt="Горный пейзаж с видом на дорогу">
-                  <a class="hotels-list-item-link" href="#">
+                <li class="hotels-card card">
+                  <img class="card-image" src="" alt="Горный пейзаж с видом на дорогу">
+                  <a class="card-link" href="#">
                     <h3 class="hotels-card-title">GreenTree Inn</h3>
                     </a>
                     <span class="hotels-list-details">Гостиница</span>
@@ -251,7 +256,7 @@
             </section>
 
             <!--Кнопка "Загрузить еще"-->
-            <button class="button pagination-show-more" type="button">Загрузить ещё</button>
+            <button class="button show-more-button" type="button">Загрузить ещё</button>
             
             <!--Блок с пагинацией-->
             <ul class="pagination">
@@ -277,14 +282,13 @@
               </li>
             </ul>
 
-          <!-- Верно ли здесь или лучше по-другому сделать? -->
-          <form class="hotels-page-number">
-          <label class="visually-hidden" for="page-number">Сортировать</label>
+          <!-- Убрала form, оставила select. Текст просто обернуть в p? -->
+          <p class="hotels-number-page">Гостиниц на странице:</p>
           <select class="select-number" id="page-number" name="page-number">
           <option value="4">4</option>
           </select>
+          <!-- Здесь можно оставить так или нужно было сделать по другому? -->
           <button class="visually-hidden" type="submit">Показать список гостиниц на странице</button>
-          </form>
                
         <!-- Блок подписки на рассылку -->
           <section class="subscription">
