@@ -3,31 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
     <header class="page-header">
       <!-- Блок навигации -->
         <nav class="navigation">
-           
+
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
           </li>
-    
+
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
-    
+
           <li class="navigation-item">
             <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
           </li>
-    
+
         </ul>
 
         <!-- Логотип -->
         <a class="logo" href="index.html">
-        <img class="logo-image" src=" " alt="Логотип города Седона">
+        <img class="logo-image" src="img/svg/sedona-logo.svg" width="138" height="70" alt="Логотип Седоны">
         </a>
 
         <div class="navigation-user">
@@ -36,13 +37,13 @@
             Поиск
             </span>
           </a>
-        
+
           <a class="navigation-link" href="#">
             <span class="visually-hidden">
               Избранное
             </span>
             </a>
-                  
+
           <a class="navigation-link" href="#">
             Хочу сюда!
             </a>
@@ -82,24 +83,24 @@
               <li class="form-field-item">
                 <label class="form-label">
                   <input class="visually-hidden form-checkbox" type="checkbox" name="infrastructure" checked>
-                  <span class="control-mark"></span>
-              <span class="control-label">Бассейн</span>
+                  <span class="form-label-mark"></span>
+              <span class="form-label-name">Бассейн</span>
                 </label>
               </li>
 
               <li class="form-field-item">
                 <label class="form-label">
                   <input class="visually-hidden form-checkbox" type="checkbox" name="parking" checked>
-                  <span class="control-mark"></span>
-              <span class="control-label">Парковка</span>
+                  <span class="form-label-mark"></span>
+              <span class="form-label-name">Парковка</span>
                 </label>
               </li>
 
               <li class="form-field-item">
                 <label class="form-label">
                   <input class="visually-hidden form-checkbox" type="checkbox" name="wifi">
-                  <span class="control-mark"></span>
-              <span class="control-label">Wi-Fi</span>
+                  <span class="form-label-mark"></span>
+              <span class="form-label-name">Wi-Fi</span>
                 </label>
               </li>
             </ul>
@@ -112,24 +113,24 @@
                   <li class="form-field-item">
                   <label class="form-label">
                     <input class="visually-hidden form-radio" type="radio" name="type-of-hotel" value="hotel" checked>
-                    <span class="control-mark"></span>
-                <span class="control-label">Гостиница</span>
+                    <span class="form-label-mark"></span>
+                <span class="form-label-name">Гостиница</span>
                   </label>
                 </li>
-  
+
                 <li class="form-field-item">
                   <label class="form-label">
                     <input class="visually-hidden form-radio" type="radio" name="type-of-hotel" value="motel">
-                    <span class="control-mark"></span>
-                <span class="control-label">Мотель</span>
+                    <span class="form-label-mark"></span>
+                <span class="form-label-name">Мотель</span>
                   </label>
                 </li>
-  
+
                 <li class="form-field-item">
                   <label class="form-label">
                     <input class="visually-hidden form-radio" type="radio" name="type-of-hotel" value="apartments">
-                    <span class="control-mark"></span>
-                <span class="control-label">Апартаменты</span>
+                    <span class="form-label-mark"></span>
+                <span class="form-label-name">Апартаменты</span>
                   </label>
                 </li>
               </ul>
@@ -144,14 +145,14 @@
               <button class="range-toggle toggle-max" type="button">
                 <span class="visually-hidden">Изменить максимальную цену</span>
               </button>
-  
+
               <label class="catalog-filter-label">
               <input class="catalog-filter-input" type="number" name="min-price" placeholder="от">
-              <span class="filter-input">от</span> 
+              <span class="filter-input">от</span>
               </label>
-  
+
               <label class="catalog-filter-label">
-              <input class="catalog-filter-input" type="number" name="max-price" placeholder="до"> 
+              <input class="catalog-filter-input" type="number" name="max-price" placeholder="до">
               <span class="filter-input">до</span>
             </label>
             </fieldset>
@@ -159,31 +160,31 @@
             <!--Кнопка-->
             <button class="button form-submit form-reset" type="submit">Применить</button>
             <!--Здесь исправила с кнопки на ссылку.-->
-            <a class="button-reset" href="#">Сбросить</a>
+            <button class="button form-reset" type="reset">Сбросить</button>
             </form>
           </section>
 
             <!--Сортировка гостиниц-->
             <section class="sorting-hotels">
-              <h2 class="find-hotels">Найдено гостиниц: <span class="result-sorting">38</span></h2> 
-              
+              <h2 class="find-hotels">Найдено гостиниц: <span class="result-sorting">38</span></h2>
+
                 <select class="select-control" id="sorting" name="sorting">
                   <option value="cheap">Сначала дешевые</option>
                   <option value="expensive">Сначала дорогие</option>
                   <option value="popular">Сначала популярные</option>
                 </select>
                 <button class="visually-hidden" type="submit">Отсортировать гостиницы</button>
-              
-              
-              <a class="sort-button" href="#">
+
+
+              <a class="sort-button mode-tile" href="#">
                 <span class="visually-hidden">Иконка карточек</span>
               </a>
 
-              <a class="sort-button" href="#">
+              <a class="sort-button mode-slideshow" href="#">
                 <span class="visually-hidden">Иконка карточек с описанием</span>
               </a>
 
-              <a class="sort-button button-light" href="#">
+              <a class="sort-button mode-list button-light" href="#">
                 <span class="visually-hidden">Иконка списка</span>
               </a>
             </section>
@@ -194,62 +195,90 @@
               <ul class="hotels-list">
 
                 <li class="hotels-card card">
-                  <img class="card-image" src="" alt="Пейзаж с видом на красные горы">
+                  <img class="card-image" src="img/catalog/hotel-1.jpg" width="180" height="120" alt="Пейзаж с видом на красные горы">
                   <a class="card-link" href="#">
-                    <h3 class="hotels-card-title">Amara Resort & Spa</h3>
+                    <h3 class="card-title">Amara Resort & Spa</h3>
                     </a>
-                    <span class="hotels-list-details">Гостиница</span>
-                    <span class="hotels-list-cost">От 4000 р</span>
-                    <a class="hotels-card-button" href="#">подробнее</a> 
-                    <button class="button" type="submit">в избранное</button>
-                    <div class="rating-stars"> <!--Или рейтинг со звездочками лучше по другому сделать?-->
-                      <span class="visually-hidden">Рейтинг в виде звездочек</span>
-                      <button class="button" type="button">рейтинг: 8,5</button><!--Кнопка?-->
+                    <span class="card-details">Гостиница</span>
+                    <span class="card-cost">От 4000 р</span>
+                    <a class="card-button" href="">подробнее</a>
+                    <button class="card-button card-button-favourite">в избранное</button>
+                    <div class="rating-stars">
+                      <img src="img/catalog/star-4.svg" width="91" height="17" alt="четыре звезды">
+
+                      <!--Список ниже удалить? Звезды в формате svg я обернула в img или я здесь неверно сделала?-->
+
+                      <ul class="rating-list">
+                        <li class="rating-item">*</li>
+                        <li class="rating-item">*</li>
+                        <li class="rating-item">*</li>
+                        <li class="rating-item">*</li>
+                      </ul>
+                      <p class="rating-text">рейтинг: 8,5</p>
                       </div>
                 </li>
 
                 <li class="hotels-card card">
-                  <img class="card-image" src="" alt="Пейзаж с видом на красные горы">
+                  <img class="card-image" src="img/catalog/hotel-2.jpg" width="180" height="120" alt="Пейзаж с видом на красные горы">
                   <a class="card-link" href="#">
-                    <h3 class="hotels-card-title">Desert Quail Inn</h3>
+                    <h3 class="card-title">Desert Quail Inn</h3>
                     </a>
-                    <span class="hotels-list-details">Мотель</span>
-                    <span class="hotels-list-cost">От 3000 р</span>
-                    <a class="hotels-card-button" href="#">подробнее</a> 
-                    <button class="button" type="submit">в избранное</button>
+                    <span class="card-details">Мотель</span>
+                    <span class="card-cost">От 3000 р</span>
+                    <a class="card-button" href="#">подробнее</a>
+                    <button class="card-button card-button-favourite">в избранное</button>
                     <div class="rating-stars">
-                      <span class="visually-hidden">Рейтинг в виде звездочек</span>
-                      <button class="button" type="button">рейтинг: 8,9</button>
+                      <img src="img/catalog/star-3.svg" width="68" height="17" alt="три звезды">
+
+                      <!--Список ниже удалить? Звезды в формате svg я обернула в img или я здесь неверно сделала?-->
+                        <ul class="rating-list">
+                          <li class="rating-item">*</li>
+                          <li class="rating-item">*</li>
+                          <li class="rating-item">*</li>
+                        </ul>
+                        <p class="rating-text">рейтинг: 8,9</p>
+                        </div>
+                </li>
+
+                <li class="hotels-card card">
+                  <img class="card-image" src="img/catalog/hotel-3.jpg" width="180" height="120" alt="Пейзаж с видом на красные горы">
+                  <a class="card-link" href="#">
+                    <h3 class="card-title">Villas at Poco Diablo</h3>
+                    </a>
+                    <span class="card-details">Апартаменты</span>
+                    <span class="card-cost">От 2000 р</span>
+                    <a class="card-button" href="#">подробнее</a>
+                    <button class="card-button card-button-favourite">в избранном</button>
+                    <div class="rating-stars">
+                      <img src="img/catalog/star-2.svg" width="43" height="17" alt="две звезды">
+
+                      <!--Список ниже удалить? Звезды в формате svg я обернула в img или я здесь неверно сделала?-->
+                      <ul class="rating-list">
+                        <li class="rating-item">*</li>
+                        <li class="rating-item">*</li>
+                      </ul>
+                      <p class="rating-text">рейтинг: 9,2</p>
                       </div>
                 </li>
 
                 <li class="hotels-card card">
-                  <img class="card-image" src="" alt="Пейзаж с видом на красные горы">
+                  <img class="card-image" src="img/catalog/hotel-4.jpg" width="180" height="120" alt="Горный пейзаж с видом на дорогу">
                   <a class="card-link" href="#">
-                    <h3 class="hotels-card-title">Villas at Poco Diablo</h3>
+                    <h3 class="card-title">GreenTree Inn</h3>
                     </a>
-                    <span class="hotels-list-details">Апартаменты</span>
-                    <span class="hotels-list-cost">От 2000 р</span>
-                    <a class="hotels-card-button" href="#">подробнее</a> 
-                    <button class="button" type="submit">в избранное</button>
+                    <span class="card-details">Гостиница</span>
+                    <span class="card-cost">От 3000 р</span>
+                    <a class="card-button" href="#">подробнее</a>
+                    <button class="card-button card-button-favourite">в избранное</button>
                     <div class="rating-stars">
-                      <span class="visually-hidden">Рейтинг в виде звездочек</span>
-                      <button class="button" type="button">рейтинг: 9,2</button>
-                      </div>
-                </li>
+                      <img src="img/catalog/star-2.svg" width="43" height="17" alt="две звезды">
 
-                <li class="hotels-card card">
-                  <img class="card-image" src="" alt="Горный пейзаж с видом на дорогу">
-                  <a class="card-link" href="#">
-                    <h3 class="hotels-card-title">GreenTree Inn</h3>
-                    </a>
-                    <span class="hotels-list-details">Гостиница</span>
-                    <span class="hotels-list-cost">От 3000 р</span>
-                    <a class="hotels-card-button" href="#">подробнее</a> 
-                    <button class="button" type="submit">в избранное</button>
-                    <div class="rating-stars">
-                      <span class="visually-hidden">Рейтинг в виде звездочек</span>
-                      <button class="button" type="button">рейтинг: 9,2</button>
+                      <!--Список ниже удалить? Звезды в формате svg я обернула в img или я здесь неверно сделала?-->
+                      <ul class="rating-list">
+                        <li class="rating-item">*</li>
+                        <li class="rating-item">*</li>
+                      </ul>
+                      <p class="rating-text">рейтинг: 9,2</p>
                       </div>
                 </li>
               </ul>
@@ -257,7 +286,7 @@
 
             <!--Кнопка "Загрузить еще"-->
             <button class="button show-more-button" type="button">Загрузить ещё</button>
-            
+
             <!--Блок с пагинацией-->
             <ul class="pagination">
               <li class="pagination-item">
@@ -290,9 +319,8 @@
           </select>
           </div>
 
-          <!-- Здесь можно оставить так или нужно было сделать по другому? -->
           <button class="visually-hidden" type="submit">Показать список гостиниц на странице</button>
-               
+
           <!-- Блок подписки на рассылку -->
           <section class="subscription">
           <h2 class="title form-title">Подпишитесь на рассылку</h2>
@@ -315,18 +343,22 @@
 
                   <li class="social-item">
                     <a href="https://twitter.com/htmlacademy_ru">
+                      <img src="img/svg/social-twitter.svg" width="18" height="15" alt="Twitter">
                       <span class="visually-hidden">Twitter</span>
                     </a>
 
                   </li>
+
                   <li class="social-item">
                     <a href="https://www.facebook.com/htmlacademy">
+                      <img src="img/svg/social-facebook.svg" width="10" height="18" alt="Facebook">
                       <span class="visually-hidden">Facebook</span>
                     </a>
                   </li>
 
                   <li class="social-item">
                     <a href="https://www.youtube.com/c/HTMLAcademyRUS">
+                      <img src="img/svg/social-youtube.svg" width="20" height="16" alt="Youtube">
                       <span class="visually-hidden">Youtube</span>
                     </a>
                   </li>
@@ -339,11 +371,13 @@
                 </address>
 
                 <!-- Сайт html академии -->
-                <a class="footer-link" href="https://htmlacademy.ru/">.html academy</a>
+                <a class="footer-link" href="https://htmlacademy.ru/">
+                <img src="img/svg/footer-logo.svg" width="115" height="33" alt="Логотип HTML Academy">
+                </a>
                 </div>
               </div>
           </footer>
 
         </body>
-        
+
 </html>
