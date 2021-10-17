@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display:swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display:swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+/* Значки из раздела навигации на главной странице */
+
+.navigation-search {
+  background-image: url(../img/svg/search.svg);
+  background-repeat:no-repeat;
+
+}
+
+.navigation-favourites {
+  background-image: url(../img/svg/heart.svg);
+  background-repeat:no-repeat;
+}
+
+/* Фоновое изображение на главной странице */
+
+.welcome-section {
+  background-image: url(../img/jpg/index-background.jpg);
+  background-repeat:no-repeat;
+  background-size: 100% auto;
+}
+
+/* Значки из блока "Преимущества" */
+
+.advantages-item-home {
+  background-image: url(../img/svg/advantages-icon-1.svg);
+  background-repeat:no-repeat;
+}
+
+.advantages-item-food {
+  background-image: url(../img/svg/advantages-icon-2.svg);
+  background-repeat:no-repeat;
+}
+
+.advantages-item-gift {
+  background-image: url(../img/svg/advantages-icon-3.svg);
+  background-repeat:no-repeat;
+}
+
+/* Фоновое изображение со страницы каталога */
+
+.inner-header {
+  background-image: url(../img/catalog/catalog-background.jpg);
+  background-repeat:no-repeat;
+}
+
+/* Мелкие значки со страницы каталога */
+
+.mode-tile {
+  background-image: url(../img/catalog/mode-tile.svg);
+  background-repeat:no-repeat;
+}
+
+.mode-slideshow {
+  background-image: url(../img/catalog/mode-slideshow.svg);
+  background-repeat:no-repeat;
+}
+
+.mode-list {
+  background-image: url(../img/catalog/mode-list.svg);
+  background-repeat:no-repeat;
+}
+
+/* Логотип из Футера */
+
+.subscription {
+  background-image: url(../img/jpg/footer-background.jpg);
+  background-repeat:no-repeat;
+  color:#ffffff;
+  text-align: center;
+}
