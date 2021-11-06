@@ -7,6 +7,7 @@
   </head>
 
   <body>
+    <div class="container">
     <header class="page-header">
       <!-- Блок навигации -->
         <nav class="navigation">
@@ -42,17 +43,19 @@
             <span class="visually-hidden">
               Избранное
             </span>
-            </a>
+          </a>
 
           <a class="navigation-link navigation-button" href="#">
             Хочу сюда!
-            </a>
+          </a>
         </div>
         </nav>
       </header>
+      </div>
 
           <!-- Заголовок и хлебные крошки -->
-          <main class="main-inner">
+            <main class="main-inner">
+            <div class="container">
             <div class="background-container">
             <header class="inner-header">
               <h1 class="main-title-catalog">Гостиницы Седоны</h1>
@@ -72,7 +75,7 @@
 
         <!-- Фильтры для поиска -->
         <section class="catalog-filter-hotels">
-        <h2 class="visually-hidden">Каталог отелей с фильтрами</h2>
+        <h2 class="visually-hidden" hidden>Каталог отелей с фильтрами</h2>
         <form class="form filter-form" action="https://echo.htmlacademy.ru/" method="get">
 
           <fieldset class="form-fieldset">
@@ -164,8 +167,10 @@
             </form>
           </section>
           </div>
+          </div>
 
             <!--Сортировка гостиниц-->
+            <div class="container">
             <section class="sorting-hotels">
               <h2 class="find-hotels">Найдено гостиниц: <span class="result-sorting">38</span></h2>
 
@@ -175,7 +180,6 @@
                   <option value="popular">Сначала популярные</option>
                 </select>
                 <button class="visually-hidden" type="submit">Отсортировать гостиницы</button>
-
 
               <a class="sort-button mode-tile" href="#">
                 <span class="visually-hidden">Иконка карточек</span>
@@ -189,8 +193,10 @@
                 <span class="visually-hidden">Иконка списка</span>
               </a>
             </section>
+            </div>
 
             <!--Блок с карточками гостиниц-->
+            <div class="container">
             <section class="hotels-section">
               <h2 class="visually hidden">Список гостиниц</h2>
               <ul class="hotels-list">
@@ -201,9 +207,9 @@
                     <h3 class="card-title">Amara Resort & Spa</h3>
                     </a>
                     <span class="card-details">Гостиница</span>
-                    <span class="card-details">От 4000 р</span>
-                    <a class="card-button" href="">подробнее</a>
-                    <button class="button-favorite">в избранное</button>
+                    <span class="card-detaiils">От 4000 р</span>
+                    <a class="card-button button" href="">подробнее</a>
+                    <button class="button-favorite button">в избранное</button>
 
                     <div class="rating-stars">
 
@@ -224,8 +230,8 @@
                     </a>
                     <span class="card-details">Мотель</span>
                     <span class="card-details">От 3000 р</span>
-                    <a class="card-button" href="#">подробнее</a>
-                    <button class="button-favorite">в избранное</button>
+                    <a class="card-button button" href="#">подробнее</a>
+                    <button class="button-favorite button">в избранное</button>
                     <div class="rating-stars">
 
                         <ul class="rating-list">
@@ -244,8 +250,8 @@
                     </a>
                     <span class="card-details">Апартаменты</span>
                     <span class="card-details">От 2000 р</span>
-                    <a class="card-button" href="#">подробнее</a>
-                    <button class="button-favorite card-button-favourite">в избранном</button>
+                    <a class="card-button button" href="#">подробнее</a>
+                    <button class="button-favorite button card-button-favourite">в избранном</button>
                     <div class="rating-stars">
 
                       <ul class="rating-list">
@@ -263,8 +269,8 @@
                     </a>
                     <span class="card-details">Гостиница</span>
                     <span class="card-details">От 3000 р</span>
-                    <a class="card-button" href="#">подробнее</a>
-                    <button class="button-favorite">в избранное</button>
+                    <a class="card-button button" href="#">подробнее</a>
+                    <button class="button-favorite button">в избранное</button>
                     <div class="rating-stars">
 
                       <ul class="rating-list">
@@ -277,10 +283,14 @@
               </ul>
             </section>
 
+
             <!--Кнопка "Загрузить еще"-->
-            <button class="button show-more-button" type="button">Загрузить ещё</button>
+            <button class="show-more-button" type="button">Загрузить ещё</button>
+          </div>
 
             <!--Блок с пагинацией-->
+            <div class="container">
+            <div class="pagination-container">
             <ul class="pagination">
               <li class="pagination-item">
                 <a class="pagination-link pagination-current">1</a>
@@ -304,7 +314,6 @@
               </li>
             </ul>
 
-          <!-- Убрала form, оставила select.Весь блок обернула в div -->
           <div class="hotels-number-page">
           <p>Гостиниц на странице:</p>
           <select class="select-number" id="page-number" name="page-number">
@@ -313,8 +322,12 @@
           </div>
 
           <button class="visually-hidden" type="submit">Показать список гостиниц на странице</button>
+          </div>
+
+
 
           <!-- Блок подписки на рассылку -->
+          <div class="container">
           <section class="subscription-form-catalog">
           <h2 class="title form-title">Подпишитесь на рассылку</h2>
           <p class="form-description">Только полезная информация и никакого спама, <br> честное бойскаутское!
@@ -325,10 +338,14 @@
             <button class="form-submit-button" type="submit">Подписаться</button>
           </form>
           </section>
+          </div>
+          </div>
           </main>
+
           <!-- Окончание блока main -->
 
           <!-- Блок Footer -->
+          <div class="container">
           <footer class="page-footer">
             <!-- Ссылки на соц. сети -->
             <div class="index-footer">
@@ -370,6 +387,7 @@
                 </div>
               </div>
           </footer>
+        </div>
 
         </body>
 
